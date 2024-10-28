@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "OslHkADxUyQ=",
+  "success": true,
+  "projectFilePath": "/home/dung/Code/wordle-fsharp/wordle-fsharp.fsproj",
+  "expectedPackageFiles": [
+    "/home/dung/.nuget/packages/fsharp.core/8.0.401/fsharp.core.8.0.401.nupkg.sha512",
+    "/home/dung/.nuget/packages/microsoft.aspnetcore.app.ref/8.0.10/microsoft.aspnetcore.app.ref.8.0.10.nupkg.sha512"
+  ],
+  "logs": []
+}
