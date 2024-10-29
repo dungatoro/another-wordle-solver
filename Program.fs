@@ -1,4 +1,6 @@
-﻿// Counter data structure (see Python's collections.Counter)
+﻿open System
+
+// Counter data structure (see Python's collections.Counter)
 type Counter(counts: Map<char, int>) =
     // counts character occurences in a word, if the score there is 0
     static member FromString(ans: string, score: seq<int>) =
@@ -29,7 +31,30 @@ let mark guess ans =
 
     // use the score from `markGreen` to correctly `markYellow`
     markGreen guess ans |> markYellow guess ans
-    
-let ans = "dimps" 
-let guess = "tiddy" 
-printfn "%A" (mark guess ans |> Seq.toList)
+
+let scoreMatches score guess ans = Seq.forall2 (=) score (mark guess ans)
+
+let numLeft guess score answers = 
+    let sameScore ans = if scoreMatches score guess ans then 1 else 0
+    answers |> Array.Parallel.map sameScore |> Array.sum
+
+let rateGuess answers guess =
+    let numAnswersLeft ans = numLeft guess (mark guess ans) answers
+    answers |> Array.map numAnswersLeft |> Array.sum 
+
+let bestGuess answers guesses =
+    guesses |> Array.map (rateGuess answers) |> Array.zip guesses |> Array.minBy snd |> fst
+
+let mutable guess = "roate"
+let mutable answers = IO.File.ReadAllLines("answers.txt")
+let guesses = IO.File.ReadAllLines("guesses.txt")
+
+while Seq.length answers > 1 do
+    printfn "The best guess is: '%s'" guess
+    printf "Enter the score i.e. 00102: "
+    let score = Console.ReadLine() |> Seq.map (fun c -> int (c - '0'))
+
+    answers <- Array.filter (scoreMatches score guess) answers
+    guess <- bestGuess answers guesses
+
+printfn "The best word is %A" answers

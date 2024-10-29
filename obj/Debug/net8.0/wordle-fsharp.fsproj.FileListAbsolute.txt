@@ -27,3 +27,5 @@
 /home/dung/Code/wordle-fsharp/obj/Debug/net8.0/wordle-fsharp.pdb
 /home/dung/Code/wordle-fsharp/obj/Debug/net8.0/wordle-fsharp.genruntimeconfig.cache
 /home/dung/Code/wordle-fsharp/obj/Debug/net8.0/ref/wordle-fsharp.dll
+/home/dung/Code/wordle-fsharp/obj/Debug/net8.0/wordle-fsharp.sourcelink.json
+/home/dung/Code/wordle-fsharp/bin/Debug/net8.0/FSharp.Collections.ParallelSeq.dll

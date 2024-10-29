@@ -8,10 +8,22 @@
     ".NETCoreApp,Version=v8.0": {
       "wordle-fsharp/1.0.0": {
         "dependencies": {
+          "FSharp.Collections.ParallelSeq": "1.2.0",
           "FSharp.Core": "8.0.401"
         },
         "runtime": {
           "wordle-fsharp.dll": {}
+        }
+      },
+      "FSharp.Collections.ParallelSeq/1.2.0": {
+        "dependencies": {
+          "FSharp.Core": "8.0.401"
+        },
+        "runtime": {
+          "lib/netstandard2.0/FSharp.Collections.ParallelSeq.dll": {
+            "assemblyVersion": "1.2.0.0",
+            "fileVersion": "1.2.0.0"
+          }
         }
       },
       "FSharp.Core/8.0.401": {
@@ -70,6 +82,13 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "FSharp.Collections.ParallelSeq/1.2.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-NoMSS6RHyAVixqAENqSWVNqQPYAHbU0WVVkr1M5ZoVmD1spM92SN4Fa+9+P7YjoQJJf2GYg9ENukjbmxGpQPag==",
+      "path": "fsharp.collections.parallelseq/1.2.0",
+      "hashPath": "fsharp.collections.parallelseq.1.2.0.nupkg.sha512"
     },
     "FSharp.Core/8.0.401": {
       "type": "package",

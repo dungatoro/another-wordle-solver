@@ -39,6 +39,11 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "FSharp.Collections.ParallelSeq": {
+              "target": "Package",
+              "version": "[1.2.0, )",
+              "generatePathProperty": true
+            },
             "FSharp.Core": {
               "include": "Runtime, Compile, Build, Native, Analyzers, BuildTransitive",
               "target": "Package",

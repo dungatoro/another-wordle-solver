@@ -2,6 +2,22 @@
   "version": 3,
   "targets": {
     "net8.0": {
+      "FSharp.Collections.ParallelSeq/1.2.0": {
+        "type": "package",
+        "dependencies": {
+          "FSharp.Core": "5.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/FSharp.Collections.ParallelSeq.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/FSharp.Collections.ParallelSeq.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "FSharp.Core/8.0.401": {
         "type": "package",
         "compile": {
@@ -59,6 +75,20 @@
     }
   },
   "libraries": {
+    "FSharp.Collections.ParallelSeq/1.2.0": {
+      "sha512": "NoMSS6RHyAVixqAENqSWVNqQPYAHbU0WVVkr1M5ZoVmD1spM92SN4Fa+9+P7YjoQJJf2GYg9ENukjbmxGpQPag==",
+      "type": "package",
+      "path": "fsharp.collections.parallelseq/1.2.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "fsharp.collections.parallelseq.1.2.0.nupkg.sha512",
+        "fsharp.collections.parallelseq.nuspec",
+        "lib/netstandard2.0/FSharp.Collections.ParallelSeq.dll",
+        "lib/netstandard2.0/FSharp.Collections.ParallelSeq.xml",
+        "logo.png"
+      ]
+    },
     "FSharp.Core/8.0.401": {
       "sha512": "pvmquLrs82m8WqWB49Gj+hsmnWURkUbc++pJ0P2NdrEv1ZVVrhDNjSiFNP4wW4HiTowwaRhjiBc5IKNV35Vf/A==",
       "type": "package",
@@ -104,6 +134,7 @@
   },
   "projectFileDependencyGroups": {
     "net8.0": [
+      "FSharp.Collections.ParallelSeq >= 1.2.0",
       "FSharp.Core >= 8.0.401"
     ]
   },
@@ -145,6 +176,11 @@
       "net8.0": {
         "targetAlias": "net8.0",
         "dependencies": {
+          "FSharp.Collections.ParallelSeq": {
+            "target": "Package",
+            "version": "[1.2.0, )",
+            "generatePathProperty": true
+          },
           "FSharp.Core": {
             "include": "Runtime, Compile, Build, Native, Analyzers, BuildTransitive",
             "target": "Package",

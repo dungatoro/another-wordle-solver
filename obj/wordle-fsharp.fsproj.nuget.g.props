@@ -14,5 +14,6 @@
   </ItemGroup>
   <PropertyGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
     <PkgFSharp_Core Condition=" '$(PkgFSharp_Core)' == '' ">/home/dung/.nuget/packages/fsharp.core/8.0.401</PkgFSharp_Core>
+    <PkgFSharp_Collections_ParallelSeq Condition=" '$(PkgFSharp_Collections_ParallelSeq)' == '' ">/home/dung/.nuget/packages/fsharp.collections.parallelseq/1.2.0</PkgFSharp_Collections_ParallelSeq>
   </PropertyGroup>
 </Project>
